@@ -1,0 +1,10 @@
+<%- include('partials/header'); -%>
+<% var date  = new Date(date); %>
+<% date = date.toDateString().split(' ').slice(1).join(' ') ; %>
+<h1><%= date %></h1>
+<h2><%= title %></h1>
+<p><%= content %></p>
+
+
+
+<%- include('partials/footer'); -%>

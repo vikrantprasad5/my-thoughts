@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+<h1>Compose</h1>
+
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <label for="start">Date : </label>
+    <input type="date" id="start" name="postDate" min="2020-01-01" max="2021-12-31" onload="getDate()">
+  </div>
+  <div class="form-group">
+    <label for="">Title</label>
+    <input type="text" class="form-control" name="postTitle" placeholder="Write the date (eg.2nd August 2020) along with  write the title of idea">
+  </div>
+
+  <div class="form-group">
+    <label for="">Post</label>
+    <textarea class="form-control" id="" rows="5" cols="30" name="postBody"></textarea>
+  </div>
+  <button type="submit" class=" btn-primary btn" name="button" >Publish</button>
+</form>
+<%- include('partials/footer'); -%>
