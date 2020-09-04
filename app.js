@@ -7,8 +7,8 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 
 const homeStartingContent = "“Life moves pretty fast. If you don’t stop and look around once in a while, you could miss it.” ~ Ferris Bueller";
-const homeSecondParagraph = "Writing a journal is a great way to unleash your creativity. Everyone has the potential to be creative, just that most of us haven’t discovered it yet. Your journal is the best place to start exploring your inner creativity. Write down anything that comes to your mind. Let your imaginations run wild and record it in Journey.";
-const aboutContent = "Hello! this is a write your journal web-app developed by me, by using NodeJS and MongoDB as a project to write in my resume, but I guess you can use it to document your daily ideas and experiences.";
+const homeSecondParagraph = "Writing down your thoughts is a great way to unleash your creativity. Everyone has the potential to be creative, just that most of us haven’t discovered it yet. Here I write down my thoughts that are worth sharing 😅 to others. I hope you like them and connect with me.";
+const aboutContent = "Hello! this is my personal blogging site where I share my thougts on life, developed by me by using NodeJS,EJS and MongoDB as a project to write in my resume, but I guess I can also use it to share my thoughts and experiences with you.";
 const contactContent = "You can contact me on ";
 
 const app = express();
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 //MONGOOSE DATA BASE CONNECTION
-mongoose.connect("mongodb://localhost:27017/blogDB", {
+mongoose.connect("mongodb+srv://vikrantprasad5:20Six@fortnite@cluster0.nwniy.mongodb.net/blogDB", {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
@@ -108,9 +108,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
-app.listen(port);
-
-
 app.listen(port, function() {
-  console.log("Server started ");
+  console.log("Server has started successfully");
 });
